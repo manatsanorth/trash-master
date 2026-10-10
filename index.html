@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f8f5">
+
+  <title>Trash Master</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="bg-pattern"></div>
+
+
+  <!-- =========================
+       หน้าแรก
+  ========================== -->
+
+  <section id="homeScreen" class="screen active">
+
+    <div class="topbar">
+
+      <div class="brand">
+        TRASH MASTER
+      </div>
+
+      <div class="mini-chip">
+        ♻ RECYCLE QUIZ
+      </div>
+
+    </div>
+
+
+    <main class="center">
+
+      <div class="trash-hero">
+
+        <div class="bin-lid"></div>
+
+        <div class="bin-body">
+          ♻
+        </div>
+
+        <span class="trash-piece p1">
+          ▰
+        </span>
+
+        <span class="trash-piece p2">
+          ●
+        </span>
+
+        <span class="trash-piece p3">
+          ▱
+        </span>
+
+      </div>
+
+
+      <p class="eyebrow">
+        INTERACTIVE QUIZ
+      </p>
+
+
+      <h1>
+        ภารกิจแยกขยะ<br>
+        คุณอยู่ระดับไหน?
+      </h1>
+
+
+      <p class="lead">
+        ตอบคำถาม 10 ข้อ
+        เพื่อวัดความรู้เรื่องการแยกขยะ
+        <br>
+        แล้วรับระดับและคำแนะนำที่เหมาะกับคุณ
+      </p>
+
+
+      <button
+        id="startBtn"
+        class="primary-btn">
+
+        เริ่มภารกิจ
+
+      </button>
+
+    </main>
+
+  </section>
+
+
+
+  <!-- =========================
+       STORY
+  ========================== -->
+
+  <section id="storyScreen" class="screen">
+
+    <button
+      class="home-btn"
+      data-home>
+
+      ← HOME
+
+    </button>
+
+
+    <main class="center">
+
+      <div class="trash-card-icon">
+        ♻
+      </div>
+
+
+      <p class="story-text">
+
+        ขยะทุกชิ้นมีที่ไปของมัน
+
+        <br><br>
+
+        ถ้าเราแยกถูก
+        วัสดุบางชนิดสามารถกลับมาใช้ประโยชน์ได้อีก
+
+        <br>
+
+        แต่ถ้าแยกผิด
+        สิ่งที่รีไซเคิลได้อาจกลายเป็นขยะไร้ค่า
+
+        <br><br>
+
+        มาลองดูว่าคุณจะแยกได้ถูกกี่ข้อ
+
+      </p>
+
+
+      <button
+        id="storyNextBtn"
+        class="outline-btn">
+
+        ต่อไป →
+
+      </button>
+
+    </main>
+
+  </section>
+
+
+
+  <!-- =========================
+       กรอกข้อมูล
+  ========================== -->
+
+  <section id="profileScreen" class="screen">
+
+    <button
+      class="home-btn"
+      data-home>
+
+      ← HOME
+
+    </button>
+
+
+    <main class="center">
+
+      <div class="trash-card-icon">
+        🗑️
+      </div>
+
+
+      <p class="eyebrow">
+        BEFORE WE BEGIN
+      </p>
+
+
+      <h2>
+        ก่อนเริ่มภารกิจ
+      </h2>
+
+
+      <p class="lead">
+
+        ใส่ชื่อเล่นและชั้นปี
+        เพื่อเริ่มแบบทดสอบ
+
+      </p>
+
+
+      <div class="form-box">
+
+        <input
+          id="playerName"
+          class="input"
+          type="text"
+          maxlength="30"
+          placeholder="ชื่อเล่น">
+
+
+        <select
+          id="yearLevel"
+          class="input">
+
+          <option value="">
+            เลือกชั้นปี
+          </option>
+
+          <option>
+            ปี 1
+          </option>
+
+          <option>
+            ปี 2
+          </option>
+
+          <option>
+            ปี 3
+          </option>
+
+          <option>
+            ปี 4
+          </option>
+
+          <option>
+            ปี 5 ขึ้นไป
+          </option>
+
+          <option>
+            บุคคลทั่วไป
+          </option>
+
+        </select>
+
+
+        <label class="consent">
+
+          <input
+            id="consentCheck"
+            type="checkbox">
+
+
+          <span>
+
+            ยินยอมให้บันทึก
+            ชื่อเล่น ชั้นปี คะแนน
+            และเวลาในการทำแบบทดสอบ
+            เพื่อใช้สรุปผลโครงงาน
+
+          </span>
+
+        </label>
+
+      </div>
+
+
+      <p
+        id="profileError"
+        class="error">
+      </p>
+
+
+      <button
+        id="profileNextBtn"
+        class="primary-btn">
+
+        ออกเดินทาง
+
+      </button>
+
+    </main>
+
+  </section>
+
+
+
+  <!-- =========================
+       บทนำ
+  ========================== -->
+
+  <section id="chapterScreen" class="screen">
+
+    <button
+      class="home-btn"
+      data-home>
+
+      ← HOME
+
+    </button>
+
+
+    <main class="center">
+
+      <div class="trash-card-icon">
+        ♻
+      </div>
+
+
+      <p class="eyebrow">
+        10 QUESTIONS
+      </p>
+
+
+      <h2 class="green-title">
+        ผู้พิทักษ์การแยกขยะ
+      </h2>
+
+
+      <p
+        id="welcomeText"
+        class="lead">
+      </p>
+
+
+      <button
+        id="beginQuizBtn"
+        class="outline-btn">
+
+        เริ่มทำแบบทดสอบ
+
+      </button>
+
+    </main>
+
+  </section>
+
+
+
+  <!-- =========================
+       QUIZ
+  ========================== -->
+
+  <section id="quizScreen" class="screen">
+
+    <div class="quiz-wrap">
+
+
+      <div class="quiz-top">
+
+        <button
+          class="home-btn inline-home"
+          data-home>
+
+          ← HOME
+
+        </button>
+
+
+        <span
+          id="progressText"
+          class="progress-text">
+
+          01 / 10
+
+        </span>
+
+      </div>
+
+
+      <div class="quiz-icon">
+        ♻
+      </div>
+
+
+      <p
+        id="questionCategory"
+        class="eyebrow">
+      </p>
+
+
+      <h2
+        id="questionText"
+        class="question">
+      </h2>
+
+
+      <div
+        id="answersBox"
+        class="answers">
+      </div>
+
+
+      <div class="progress-track">
+
+        <div
+          id="progressFill"
+          class="progress-fill">
+        </div>
+
+      </div>
+
+
+      <p
+        id="feedbackText"
+        class="feedback">
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       RESULT
+  ========================== -->
+
+  <section
+    id="resultScreen"
+    class="screen result-screen">
+
+
+    <main class="result-wrap">
+
+
+      <p class="eyebrow">
+        YOUR RESULT
+      </p>
+
+
+      <h2>
+        ผลลัพธ์ของคุณ
+      </h2>
+
+
+      <div
+        id="resultBadge"
+        class="result-badge">
+
+        ♻
+
+      </div>
+
+
+      <p class="result-label">
+        ระดับของคุณ
+      </p>
+
+
+      <h1
+        id="rankTitle"
+        class="rank-title">
+      </h1>
+
+
+      <p
+        id="rankEnglish"
+        class="rank-en">
+      </p>
+
+
+
+      <div class="score-box">
+
+        <span>
+          คะแนน
+        </span>
+
+        <strong id="finalScore">
+          0/10
+        </strong>
+
+      </div>
+
+
+
+      <p
+        id="resultDescription"
+        class="result-description">
+      </p>
+
+
+
+      <div class="result-card">
+
+        <h3>
+          ✦ จุดแข็งของคุณ
+        </h3>
+
+        <p id="strengthText">
+        </p>
+
+      </div>
+
+
+
+      <div class="result-card">
+
+        <h3>
+          ✦ สิ่งที่ควรพัฒนา
+        </h3>
+
+        <p id="improveText">
+        </p>
+
+      </div>
+
+
+
+      <div class="tips">
+
+        <h3>
+          ♻ คำแนะนำในการแยกขยะ
+        </h3>
+
+
+        <ul>
+
+          <li>
+            เทของเหลวและเศษอาหารออก
+            ก่อนแยกขยะรีไซเคิล
+          </li>
+
+          <li>
+            ขวดพลาสติก กระป๋อง
+            และกระดาษสะอาด
+            ควรแยกออกจากขยะทั่วไป
+          </li>
+
+          <li>
+            ถ่านไฟฉาย หลอดไฟ
+            และขยะอิเล็กทรอนิกส์
+            ควรทิ้งที่จุดรับขยะอันตราย
+          </li>
+
+          <li>
+            พกแก้ว ขวดน้ำ
+            กล่องอาหาร หรือถุงผ้า
+            เพื่อลดขยะตั้งแต่ต้นทาง
+          </li>
+
+          <li>
+            ถ้าไม่แน่ใจ
+            ให้ดูป้ายหรือสัญลักษณ์
+            บนถังก่อนทิ้ง
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="bin-guide">
+
+        <div class="bin bin-green">
+
+          <b>
+            รีไซเคิล
+          </b>
+
+          <span>
+            ขวด / กระป๋อง / กระดาษสะอาด
+          </span>
+
+        </div>
+
+
+        <div class="bin bin-brown">
+
+          <b>
+            อินทรีย์
+          </b>
+
+          <span>
+            เศษอาหาร / เปลือกผลไม้
+          </span>
+
+        </div>
+
+
+        <div class="bin bin-red">
+
+          <b>
+            อันตราย
+          </b>
+
+          <span>
+            ถ่าน / หลอดไฟ / e-waste
+          </span>
+
+        </div>
+
+
+        <div class="bin bin-blue">
+
+          <b>
+            ทั่วไป
+          </b>
+
+          <span>
+            ทิชชู่ใช้แล้ว / ของปนเปื้อน
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <p class="quote">
+
+        การแยกขยะที่ดี
+        เริ่มจากสิ่งเล็ก ๆ ในมือเรา
+
+        <strong>
+          Sort today, save tomorrow.
+        </strong>
+
+      </p>
+
+
+
+      <p class="disclaimer">
+
+        ผลลัพธ์นี้ใช้เพื่อส่งเสริมความรู้
+        และความตระหนักด้านการแยกขยะ
+        ไม่ใช่การประเมินความสามารถส่วนบุคคล
+        อย่างเป็นทางการ
+
+      </p>
+
+
+
+      <button
+        id="restartBtn"
+        class="primary-btn">
+
+        ทำแบบทดสอบอีกครั้ง
+
+      </button>
+
+    </main>
+
+  </section>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
