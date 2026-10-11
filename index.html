@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f6f8f5">
 
-  <title>Trash Master</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <link rel="stylesheet" href="style.css">
+  <meta
+    name="theme-color"
+    content="#bfe4fa"
+  >
+
+  <title>Trash Master Quiz</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
 </head>
 
+
 <body>
+
+  <!-- =========================
+       Background Pattern
+  ========================== -->
 
   <div class="bg-pattern"></div>
 
@@ -19,13 +36,17 @@
        หน้าแรก
   ========================== -->
 
-  <section id="homeScreen" class="screen active">
+  <section
+    id="homeScreen"
+    class="screen active"
+  >
 
     <div class="topbar">
 
       <div class="brand">
         TRASH MASTER
       </div>
+
 
       <div class="mini-chip">
         ♻ RECYCLE QUIZ
@@ -36,25 +57,24 @@
 
     <main class="center">
 
+
+      <!-- น้องถังขยะ CSS -->
+
       <div class="trash-hero">
 
         <div class="bin-lid"></div>
+
 
         <div class="bin-body">
           ♻
         </div>
 
-        <span class="trash-piece p1">
-          ▰
-        </span>
 
-        <span class="trash-piece p2">
-          ●
-        </span>
+        <span class="trash-piece p1"></span>
 
-        <span class="trash-piece p3">
-          ▱
-        </span>
+        <span class="trash-piece p2"></span>
+
+        <span class="trash-piece p3"></span>
 
       </div>
 
@@ -65,22 +85,30 @@
 
 
       <h1>
-        ภารกิจแยกขยะ<br>
+        ภารกิจแยกขยะ
+        <br>
         คุณอยู่ระดับไหน?
       </h1>
 
 
       <p class="lead">
+
         ตอบคำถาม 10 ข้อ
         เพื่อวัดความรู้เรื่องการแยกขยะ
+
         <br>
-        แล้วรับระดับและคำแนะนำที่เหมาะกับคุณ
+
+        แล้วมาดูกันว่า
+        คุณจะได้เป็นนักแยกขยะระดับไหน
+
       </p>
 
 
       <button
         id="startBtn"
-        class="primary-btn">
+        class="primary-btn"
+        type="button"
+      >
 
         เริ่มภารกิจ
 
@@ -96,11 +124,16 @@
        STORY
   ========================== -->
 
-  <section id="storyScreen" class="screen">
+  <section
+    id="storyScreen"
+    class="screen"
+  >
 
     <button
       class="home-btn"
-      data-home>
+      type="button"
+      data-home
+    >
 
       ← HOME
 
@@ -109,35 +142,46 @@
 
     <main class="center">
 
+
       <div class="trash-card-icon">
         ♻
       </div>
 
 
-      <p class="story-text">
+      <p class="eyebrow">
+        TRASH STORY
+      </p>
 
+
+      <h2>
         ขยะทุกชิ้นมีที่ไปของมัน
+      </h2>
 
-        <br><br>
+
+      <p class="story-text">
 
         ถ้าเราแยกถูก
         วัสดุบางชนิดสามารถกลับมาใช้ประโยชน์ได้อีก
 
-        <br>
+        <br><br>
 
-        แต่ถ้าแยกผิด
-        สิ่งที่รีไซเคิลได้อาจกลายเป็นขยะไร้ค่า
+        แต่ถ้าเราแยกผิด
+        สิ่งที่รีไซเคิลได้
+        อาจกลายเป็นขยะไร้ค่า
 
         <br><br>
 
-        มาลองดูว่าคุณจะแยกได้ถูกกี่ข้อ
+        มาลองดูกันว่า
+        คุณจะแยกขยะได้ถูกกี่ข้อ
 
       </p>
 
 
       <button
         id="storyNextBtn"
-        class="outline-btn">
+        class="outline-btn"
+        type="button"
+      >
 
         ต่อไป →
 
@@ -150,14 +194,19 @@
 
 
   <!-- =========================
-       กรอกข้อมูล
+       PROFILE
   ========================== -->
 
-  <section id="profileScreen" class="screen">
+  <section
+    id="profileScreen"
+    class="screen"
+  >
 
     <button
       class="home-btn"
-      data-home>
+      type="button"
+      data-home
+    >
 
       ← HOME
 
@@ -165,6 +214,7 @@
 
 
     <main class="center">
+
 
       <div class="trash-card-icon">
         🗑️
@@ -183,51 +233,64 @@
 
       <p class="lead">
 
-        ใส่ชื่อเล่นและชั้นปี
-        เพื่อเริ่มแบบทดสอบ
+        บอกชื่อเล่นและชั้นปีของคุณให้เรารู้หน่อย
+
+        <br>
+
+        แล้วมาเริ่มภารกิจแยกขยะไปด้วยกัน
 
       </p>
 
 
       <div class="form-box">
 
+
         <input
           id="playerName"
           class="input"
           type="text"
           maxlength="30"
-          placeholder="ชื่อเล่น">
+          autocomplete="off"
+          placeholder="ชื่อเล่นของคุณ"
+        >
 
 
         <select
           id="yearLevel"
-          class="input">
+          class="input"
+        >
 
           <option value="">
             เลือกชั้นปี
           </option>
 
-          <option>
+
+          <option value="ปี 1">
             ปี 1
           </option>
 
-          <option>
+
+          <option value="ปี 2">
             ปี 2
           </option>
 
-          <option>
+
+          <option value="ปี 3">
             ปี 3
           </option>
 
-          <option>
+
+          <option value="ปี 4">
             ปี 4
           </option>
 
-          <option>
+
+          <option value="ปี 5 ขึ้นไป">
             ปี 5 ขึ้นไป
           </option>
 
-          <option>
+
+          <option value="บุคคลทั่วไป">
             บุคคลทั่วไป
           </option>
 
@@ -238,7 +301,8 @@
 
           <input
             id="consentCheck"
-            type="checkbox">
+            type="checkbox"
+          >
 
 
           <span>
@@ -246,7 +310,8 @@
             ยินยอมให้บันทึก
             ชื่อเล่น ชั้นปี คะแนน
             และเวลาในการทำแบบทดสอบ
-            เพื่อใช้สรุปผลโครงงาน
+
+            เพื่อใช้ในการสรุปผลโครงงาน
 
           </span>
 
@@ -257,13 +322,15 @@
 
       <p
         id="profileError"
-        class="error">
-      </p>
+        class="error"
+      ></p>
 
 
       <button
         id="profileNextBtn"
-        class="primary-btn">
+        class="primary-btn"
+        type="button"
+      >
 
         ออกเดินทาง
 
@@ -276,14 +343,19 @@
 
 
   <!-- =========================
-       บทนำ
+       CHAPTER INTRO
   ========================== -->
 
-  <section id="chapterScreen" class="screen">
+  <section
+    id="chapterScreen"
+    class="screen"
+  >
 
     <button
       class="home-btn"
-      data-home>
+      type="button"
+      data-home
+    >
 
       ← HOME
 
@@ -291,6 +363,7 @@
 
 
     <main class="center">
+
 
       <div class="trash-card-icon">
         ♻
@@ -309,13 +382,15 @@
 
       <p
         id="welcomeText"
-        class="lead">
-      </p>
+        class="lead"
+      ></p>
 
 
       <button
         id="beginQuizBtn"
-        class="outline-btn">
+        class="outline-btn"
+        type="button"
+      >
 
         เริ่มทำแบบทดสอบ
 
@@ -331,16 +406,22 @@
        QUIZ
   ========================== -->
 
-  <section id="quizScreen" class="screen">
+  <section
+    id="quizScreen"
+    class="screen"
+  >
 
     <div class="quiz-wrap">
 
 
       <div class="quiz-top">
 
+
         <button
           class="home-btn inline-home"
-          data-home>
+          type="button"
+          data-home
+        >
 
           ← HOME
 
@@ -349,7 +430,8 @@
 
         <span
           id="progressText"
-          class="progress-text">
+          class="progress-text"
+        >
 
           01 / 10
 
@@ -365,36 +447,36 @@
 
       <p
         id="questionCategory"
-        class="eyebrow">
-      </p>
+        class="eyebrow"
+      ></p>
 
 
       <h2
         id="questionText"
-        class="question">
-      </h2>
+        class="question"
+      ></h2>
 
 
       <div
         id="answersBox"
-        class="answers">
-      </div>
+        class="answers"
+      ></div>
 
 
       <div class="progress-track">
 
         <div
           id="progressFill"
-          class="progress-fill">
-        </div>
+          class="progress-fill"
+        ></div>
 
       </div>
 
 
       <p
         id="feedbackText"
-        class="feedback">
-      </p>
+        class="feedback"
+      ></p>
 
     </div>
 
@@ -408,8 +490,8 @@
 
   <section
     id="resultScreen"
-    class="screen result-screen">
-
+    class="screen result-screen"
+  >
 
     <main class="result-wrap">
 
@@ -426,7 +508,8 @@
 
       <div
         id="resultBadge"
-        class="result-badge">
+        class="result-badge"
+      >
 
         ♻
 
@@ -440,22 +523,25 @@
 
       <h1
         id="rankTitle"
-        class="rank-title">
-      </h1>
+        class="rank-title"
+      ></h1>
 
 
       <p
         id="rankEnglish"
-        class="rank-en">
-      </p>
+        class="rank-en"
+      ></p>
 
 
+
+      <!-- คะแนน -->
 
       <div class="score-box">
 
         <span>
           คะแนน
         </span>
+
 
         <strong id="finalScore">
           0/10
@@ -465,52 +551,62 @@
 
 
 
+      <!-- คำอธิบาย -->
+
       <p
         id="resultDescription"
-        class="result-description">
-      </p>
+        class="result-description"
+      ></p>
 
 
+
+      <!-- จุดแข็ง -->
 
       <div class="result-card">
 
         <h3>
-          ✦ จุดแข็งของคุณ
+          ✨ จุดแข็งของคุณ
         </h3>
 
-        <p id="strengthText">
-        </p>
+
+        <p id="strengthText"></p>
 
       </div>
 
 
 
+      <!-- สิ่งที่ควรพัฒนา -->
+
       <div class="result-card">
 
         <h3>
-          ✦ สิ่งที่ควรพัฒนา
+          🌱 สิ่งที่ควรพัฒนา
         </h3>
 
-        <p id="improveText">
-        </p>
+
+        <p id="improveText"></p>
 
       </div>
 
 
+
+      <!-- Tips -->
 
       <div class="tips">
 
+
         <h3>
-          ♻ คำแนะนำในการแยกขยะ
+          ♻️ เคล็ดลับแยกขยะง่าย ๆ
         </h3>
 
 
         <ul>
 
           <li>
-            เทของเหลวและเศษอาหารออก
-            ก่อนแยกขยะรีไซเคิล
+            เทน้ำและเศษอาหารออกก่อน
+            นำบรรจุภัณฑ์ไปรีไซเคิล
           </li>
+
 
           <li>
             ขวดพลาสติก กระป๋อง
@@ -518,22 +614,25 @@
             ควรแยกออกจากขยะทั่วไป
           </li>
 
+
           <li>
             ถ่านไฟฉาย หลอดไฟ
-            และขยะอิเล็กทรอนิกส์
-            ควรทิ้งที่จุดรับขยะอันตราย
+            และอุปกรณ์อิเล็กทรอนิกส์
+            ควรนำไปทิ้งในจุดรับขยะอันตราย
           </li>
 
+
           <li>
-            พกแก้ว ขวดน้ำ
+            พกขวดน้ำ แก้วน้ำ
             กล่องอาหาร หรือถุงผ้า
-            เพื่อลดขยะตั้งแต่ต้นทาง
+            เพื่อช่วยลดขยะตั้งแต่ต้นทาง
           </li>
 
+
           <li>
-            ถ้าไม่แน่ใจ
-            ให้ดูป้ายหรือสัญลักษณ์
-            บนถังก่อนทิ้ง
+            ถ้าไม่แน่ใจว่าขยะชิ้นนั้น
+            ควรอยู่ถังไหน
+            ให้ดูป้ายที่ถังก่อนทิ้ง
           </li>
 
         </ul>
@@ -542,55 +641,67 @@
 
 
 
+      <!-- ประเภทขยะ -->
+
       <div class="bin-guide">
+
 
         <div class="bin bin-green">
 
           <b>
-            รีไซเคิล
+            ♻️ รีไซเคิล
           </b>
 
           <span>
-            ขวด / กระป๋อง / กระดาษสะอาด
+            ขวดพลาสติก /
+            กระป๋อง /
+            กระดาษสะอาด
           </span>
 
         </div>
+
 
 
         <div class="bin bin-brown">
 
           <b>
-            อินทรีย์
+            🍌 อินทรีย์
           </b>
 
           <span>
-            เศษอาหาร / เปลือกผลไม้
+            เศษอาหาร /
+            เปลือกผลไม้
           </span>
 
         </div>
+
 
 
         <div class="bin bin-red">
 
           <b>
-            อันตราย
+            ⚠️ อันตราย
           </b>
 
           <span>
-            ถ่าน / หลอดไฟ / e-waste
+            ถ่าน /
+            หลอดไฟ /
+            e-waste
           </span>
 
         </div>
 
 
+
         <div class="bin bin-blue">
 
           <b>
-            ทั่วไป
+            🗑️ ทั่วไป
           </b>
 
           <span>
-            ทิชชู่ใช้แล้ว / ของปนเปื้อน
+            ทิชชู่ใช้แล้ว /
+            ของที่มีการปนเปื้อน
           </span>
 
         </div>
@@ -599,10 +710,13 @@
 
 
 
+      <!-- Quote -->
+
       <p class="quote">
 
-        การแยกขยะที่ดี
-        เริ่มจากสิ่งเล็ก ๆ ในมือเรา
+        ขยะชิ้นเล็ก ๆ
+        ถ้าแยกให้ถูกที่
+        ก็ช่วยโลกได้เหมือนกันนะ 🌏
 
         <strong>
           Sort today, save tomorrow.
@@ -612,12 +726,16 @@
 
 
 
+      <!-- Disclaimer -->
+
       <p class="disclaimer">
 
-        ผลลัพธ์นี้ใช้เพื่อส่งเสริมความรู้
-        และความตระหนักด้านการแยกขยะ
-        ไม่ใช่การประเมินความสามารถส่วนบุคคล
-        อย่างเป็นทางการ
+        แบบทดสอบนี้จัดทำขึ้น
+        เพื่อส่งเสริมความรู้และความตระหนัก
+        เรื่องการแยกขยะ
+
+        ไม่ใช่การประเมินความสามารถ
+        ส่วนบุคคลอย่างเป็นทางการ
 
       </p>
 
@@ -625,9 +743,11 @@
 
       <button
         id="restartBtn"
-        class="primary-btn">
+        class="primary-btn"
+        type="button"
+      >
 
-        ทำแบบทดสอบอีกครั้ง
+        เล่นอีกครั้ง
 
       </button>
 
@@ -636,7 +756,12 @@
   </section>
 
 
+  <!-- =========================
+       JavaScript
+  ========================== -->
+
   <script src="script.js"></script>
 
 </body>
+
 </html>
